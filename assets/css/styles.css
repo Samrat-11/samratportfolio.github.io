@@ -335,6 +335,12 @@ img {
 }
 
 /* ===== CONTACT =====*/
+.contact__container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
 .contact__input {
   width: 100%;
   font-size: var(--normal-font-size);

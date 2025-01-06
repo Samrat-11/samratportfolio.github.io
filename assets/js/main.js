@@ -58,14 +58,34 @@ const sr = ScrollReveal({
 
 /*===== Contact form =====*/
 
-let contact = document.getElementById("contact");
+// let contact = document.getElementById("contact");
 
-contact.addEventListener('submit', event => {
+// contact.addEventListener('submit', event => {
+//   event.preventDefault();
+//   const name = contact.elements['name'].value;
+//   const email = contact.elements['email'].value;
+//   const message = contact.elements['message'].value;
+//   let messageText = `Hi, I'm ${name} and my email address is ${email}.`
+//   if(message) {
+//     messageText+= `\n Also, please find my comments as follows: \n ${message}`;
+//   }
+
+//   const encodedText = encodeURIComponent(messageText)
+//   const url = "https://wa.me/+918247634398?text=" + encodedText;
+//   window.open(url, '_blank')
+// })
+let contactMeForm = document.getElementById("contactMeForm");
+
+contactMeForm.addEventListener('submit', event => {
   event.preventDefault();
-  const name = contact.elements['name'].value;
-  const email = contact.elements['email'].value;
-  const message = contact.elements['message'].value;
+  const name = contactMeForm.elements['name'].value;
+  const email = contactMeForm.elements['email'].value;
+  const jobDesc = contactMeForm.elements['jobDesc'].value;
+  const message = contactMeForm.elements['message'].value;
   let messageText = `Hi, I'm ${name} and my email address is ${email}.`
+  if(jobDesc) {
+     messageText += ` I would like to discuss with you regarding a job offer and it's details are as follows:\n ${jobDesc}.`;
+  }
   if(message) {
     messageText+= `\n Also, please find my comments as follows: \n ${message}`;
   }
@@ -74,7 +94,6 @@ contact.addEventListener('submit', event => {
   const url = "https://wa.me/+918247634398?text=" + encodedText;
   window.open(url, '_blank')
 })
-
 
 sr.reveal('.home__data, .about__img, .skills__subtitle, .skills__text',{}); 
 sr.reveal('.home__img, .about__subtitle, .about__text, .skills__img',{delay: 400}); 
