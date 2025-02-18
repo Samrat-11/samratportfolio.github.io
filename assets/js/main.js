@@ -52,28 +52,36 @@ const sr = ScrollReveal({
 //     reset: true
 });
 
-/* --------------- Dark Light Theme --------------- */
+// /* --------------- Dark Light Theme --------------- */
+// document.addEventListener('DOMContentLoaded', function () {
+//     const themeToggle = document.getElementById('theme-toggle');
+//     const themeIcon = document.getElementById('theme-icon');
+//     const body = document.body;
 
+//     // Check for saved theme in localStorage
+//     const savedTheme = localStorage.getItem('theme');
+//     if (savedTheme) {
+//         body.setAttribute('data-theme', savedTheme);
+//         themeIcon.className = savedTheme === 'dark' ? 'bx bx-sun' : 'bx bx-moon';
+//     }
+
+//     // Toggle theme on icon click
+//     themeToggle.addEventListener('click', function () {
+//         const currentTheme = body.getAttribute('data-theme');
+//         if (currentTheme === 'dark') {
+//             body.setAttribute('data-theme', 'light');
+//             themeIcon.className = 'bx bx-moon';
+//             localStorage.setItem('theme', 'light');
+//         } else {
+//             body.setAttribute('data-theme', 'dark');
+//             themeIcon.className = 'bx bx-sun';
+//             localStorage.setItem('theme', 'dark');
+//         }
+//     });
+// });
 
 
 /*===== Contact form =====*/
-
-// let contact = document.getElementById("contact");
-
-// contact.addEventListener('submit', event => {
-//   event.preventDefault();
-//   const name = contact.elements['name'].value;
-//   const email = contact.elements['email'].value;
-//   const message = contact.elements['message'].value;
-//   let messageText = `Hi, I'm ${name} and my email address is ${email}.`
-//   if(message) {
-//     messageText+= `\n Also, please find my comments as follows: \n ${message}`;
-//   }
-
-//   const encodedText = encodeURIComponent(messageText)
-//   const url = "https://wa.me/+918247634398?text=" + encodedText;
-//   window.open(url, '_blank')
-// })
 let contactMeForm = document.getElementById("contactMeForm");
 
 contactMeForm.addEventListener('submit', event => {
